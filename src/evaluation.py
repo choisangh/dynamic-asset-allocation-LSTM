@@ -1,14 +1,15 @@
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import tensorflow as tf
 from tensorflow.keras.optimizers import Adam
 from keras.callbacks import EarlyStopping, ModelCheckpoint
+from keras import models
 from .model import create_model
 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 SAVE_MODEL = '../models/data/model_weights.h5'
 
 
-model = SAVE_MODEL
+model = models.load_model(SAVE_MODEL)
 
 with tf.device("/device:GPU:0"):
     model.compile(loss = markowitz_objective,
