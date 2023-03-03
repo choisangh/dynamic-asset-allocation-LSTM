@@ -1,14 +1,14 @@
 import os
 import tensorflow as tf
 import tensorflow_probability as tfp
-from tensorflow.keras.layers import Input, LSTM, Dense, Activation, Conv1D, MaxPooling1D
+from keras.layers import Activation, Conv1D, MaxPooling1D, Dense, LSTM
 from keras.models import Sequential
-from keras.layers import Dense, LSTM
 
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 GAMMA_CONST = 0.15
 REG_CONST = 0.0
+
 
 def markowitz_objective(y_true, y_pred):
     W = y_pred
@@ -22,6 +22,7 @@ def markowitz_objective(y_true, y_pred):
     objective = rtn - vol - reg
 
     return -tf.reduce_sum(objective, axis=0)
+
 
 def create_model(N_TIME, N_STOCKS):
     model = Sequential()
