@@ -20,8 +20,8 @@ This project consists of the following
 * vnq(real estate ETF) :Log return data for real estate ETF
 
 # Model Architecture
-Set the Markowitz portfolio optimization function as the loss function of the deep learning model to perform dynamic asset allocation.
-
+Set the Markowitz portfolio optimization function as the loss function of the deep learning model(CNN + LSTM) to perform dynamic asset allocation.
+In time series data forecasting problems, CNN and LSTM can be used together to extract localized features with CNN and create a forecasting model that better reflects historical information with LSTM. This can lead to more accurate closing price predictions. The combined use of CNNs and LSTMs can also be useful in other problems.
 ![model](model.png)
 
 # Evaluation
