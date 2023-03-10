@@ -36,6 +36,10 @@ In time series data forecasting problems, CNN and LSTM can be used together to e
 ## Evaluation
 ![model](eval.png)
 
+## How to Run
+1. save the time series log return data in the data folder.
+2. set the config file in the src folder
+3. run main.py (visualize training and backtesting returns)
 
 
 
