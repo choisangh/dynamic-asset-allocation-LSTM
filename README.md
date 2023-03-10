@@ -19,6 +19,7 @@ This project consists of the following
 * dbc(raw materials ETF) : Log return data for raw materials ETF
 * vnq(real estate ETF) :Log return data for real estate ETF
 
+<<<<<<< HEAD
 
 ## loss function
 The loss function uses a mixture of certainty equivalents and a Markowitz model objective function. You can adjust the risk aversion coefficient (lambda value) in the certainty equivalence to adjust the risk tolerance of the model.
@@ -28,11 +29,19 @@ The loss function uses a mixture of certainty equivalents and a Markowitz model 
 
 ## Model Architecture
 Set the Markowitz portfolio optimization function as the loss function of the deep learning model to perform dynamic asset allocation.
+=======
+## Model Architecture
+Set the Markowitz portfolio optimization function as the loss function of the deep learning model(CNN + LSTM) to perform dynamic asset allocation.
+In time series data forecasting problems, CNN and LSTM can be used together to extract localized features with CNN and create a forecasting model that better reflects historical information with LSTM. This can lead to more accurate closing price predictions. The combined use of CNNs and LSTMs can also be useful in other problems.
+>>>>>>> 125349a17d56dde158306504084ff529736f0edc
 
 ![model](model.png)
 
 ## Evaluation
+<<<<<<< HEAD
 ![model](eval.png)
+=======
+>>>>>>> 125349a17d56dde158306504084ff529736f0edc
 
 
 
