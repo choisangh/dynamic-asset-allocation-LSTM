@@ -1,7 +1,7 @@
 # Dynamic Asset Allocation with LSTM
 This project aims to predict dynamic asset allocation using a Long Short-Term Memory (LSTM) model. Asset allocation refers to the composition of an investment portfolio, and in this project we are looking at assets such as stocks, bonds, and cash.
 
-# Project organization
+## Project organization
 This project consists of the following
 
 * data: A folder where asset price data for stocks, bonds, cash, etc. is stored.
@@ -10,7 +10,7 @@ This project consists of the following
 * notebooks: The folder where Jupyter Notebook files are stored.
 * main.py: The file that serves as the entry point for the program.
 
-# Data
+## Data
 * Kospi : Log return data for the Korean stock market index
 * short_bond : Log Return with Interest for short term Corporate bond AA rating
 * mid_bond : Log Return with Interest for mid term Corporate bond AA rating
@@ -19,13 +19,13 @@ This project consists of the following
 * dbc(raw materials ETF) : Log return data for raw materials ETF
 * vnq(real estate ETF) :Log return data for real estate ETF
 
-# Model Architecture
+## Model Architecture
 Set the Markowitz portfolio optimization function as the loss function of the deep learning model(CNN + LSTM) to perform dynamic asset allocation.
 In time series data forecasting problems, CNN and LSTM can be used together to extract localized features with CNN and create a forecasting model that better reflects historical information with LSTM. This can lead to more accurate closing price predictions. The combined use of CNNs and LSTMs can also be useful in other problems.
 
 ![model](model.png)
 
-# Evaluation
+## Evaluation
 
 
 
