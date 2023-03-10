@@ -3,7 +3,9 @@ import tensorflow as tf
 import tensorflow_probability as tfp
 from keras.layers import Activation, Conv1D, MaxPooling1D, Dense, LSTM
 from keras.models import Sequential
-
+from keras.optimizers import Adam
+from keras import layers, models
+from keras.utils import plot_model
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 GAMMA_CONST = 0.15
@@ -33,3 +35,18 @@ def create_model(N_TIME, N_STOCKS):
     model.add(Dense(units=N_STOCKS, activation='tanh'))
     model.add(Activation('softmax'))
     return model
+
+
+
+
+model = create_model()
+with tf.device("/device:GPU:0"):
+    model.compile(loss = markowitz_objective,
+                optimizer = Adam(learning_rate = 1e-5),
+                )
+    model.summary()
+
+    hist = model.fit(xc_train, xf_train, epochs=1000, batch_size = 64,
+                    validation_data = (xc_test, xf_test))
+
+model.save(SAVE_MODEL)
