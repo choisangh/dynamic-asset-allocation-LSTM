@@ -1,7 +1,7 @@
 # Dynamic Asset Allocation with LSTM
 This project aims to predict dynamic asset allocation using a Long Short-Term Memory (LSTM) model. Asset allocation refers to the composition of an investment portfolio, and in this project we are looking at assets such as stocks, bonds, and cash.
 
-## Project organization
+## Project Structure
 This project consists of the following
 
 * data: A folder where asset price data for stocks, bonds, cash, etc. is stored.
